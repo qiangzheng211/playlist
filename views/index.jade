@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  section
+    h4 Please choose your favorite artists to get their playlist on youtube:   
+      select(class='select_list')
+        each artist, index in artists
+          if artist.selected
+            option(id=index value=artist.query selected=true)= artist.name
+          else
+            option(id=index value=artist.query)= artist.name
+    br
+
+  section
+    iframe(id='player1' class='player' frameborder='0' allowfullscreen='1' title='YouTube video player' width='640' height='390' src='https://www.youtube.com/embed/?enablejsapi=1')
+
+  br
+  h4 More information about this video
+  br 
+  section(class='playlist_container')
+    ul(class='playlist')
+      each item in infolist
+        li
+          div(class= 'title')= item.title
+          div(class= 'description')= item.description
+          a(href='https://www.youtube.com/channel/' + item.channelId target='_blank')
+            div(class= 'channelTitle')= 'Channel Title: ' + item.channelTitle
+          div(class= 'publishedAt')= 'published At: ' + prettyDate(item.publishedAt)
+          img(src= item.thumbnail)

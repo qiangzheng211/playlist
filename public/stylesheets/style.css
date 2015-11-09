@@ -1,0 +1,65 @@
+/*base css style*/
+body {
+  font-size: 12pt;
+  font-family: sans-serif;
+  text-align: center;
+  background-image: url("../images/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+a {
+  color: #00B7FF;
+}
+select{
+  color:#AAAAAA;
+  background-color:white;
+  height:30px;
+}
+header {
+  width: 100%;
+}
+.playlist {
+  padding: 0;
+  -webkit-transition: margin-top 0.5s ease;
+  -moz-transition: margin-top 0.5s ease;
+  -ms-transition: margin-top 0.5s ease;
+  -o-transition: margin-top 0.5s ease;
+  transition: margin-top 0.5s ease;
+}
+.playlist li {
+  list-style: none;
+  display: block;
+  background-color: #999;
+  padding: 1rem;
+  margin: 0.5rem 0 0.5rem;
+  border-radius: 1rem;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -ms-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.playlist li .title {
+  font-weight: bold;
+}
+.playlist li.playing {
+  background-color: yellow;
+}
+.playlist li.buffering {
+  background-color: red;
+}
+.playlist li.cued {
+  background-color: blue;
+}
+.playlist li.paused {
+  background-color: green;
+}
+.playlist_container {
+  overflow-y: hidden;
+  height: 0px;
+  -webkit-transition: height 0.3s ease;
+  -moz-transition: height 0.3s ease;
+  -ms-transition: height 0.3s ease;
+  -o-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+}

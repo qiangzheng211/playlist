@@ -8,7 +8,7 @@
 	git clone https://github.com/qiangzheng211/playlist/
 
 3. Execute
-* Even though I have already included the node_modules file, you can get the node modules using:
+* Even though I have already included the node_modules files, if these modules do not exist, you can get the node modules using:
 
 	npm install
 
@@ -16,7 +16,7 @@
 
 	npm start
 
-* The site should be running at http://localhost:3000
+* The site should be running at http://localhost:3000 (The default broswer that I used for development is chrome)
 
 4. Design decisions
 	(1) The number of playlist videos is finite, so I set the maxmimum to be 20. A dropdown to choose from different artists, the number of artists also need to be finite, so I choose to use json file to hold these artists and my API key instead of writing directly in code. This is good to scale, to add, delete and change artists on the json file without changing code.

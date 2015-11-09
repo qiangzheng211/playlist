@@ -1,0 +1,30 @@
+{
+  "api_key": "AIzaSyAXIOfNeQwpGYJnYXSI-T7Pb_Z4cQsp__E",
+  "artists": [
+    {
+      "name": "Taylor Swift",
+      "query": "taylor swift",
+      "selected": true
+    },
+    {
+      "name": "Justin Bieber",
+      "query": "justin bieber"
+    },
+    {
+      "name": "Elton John",
+      "query": "elton john"
+    },
+    {
+      "name": "Stevie Wonder",
+      "query": "stevie wonder"
+    },
+    {
+      "name": "Frank Sinatra",
+      "query": "frank sinatra"
+    },
+    {
+      "name": "Louis Armstrong",
+      "query": "louis armstrong"
+    }
+  ]
+}

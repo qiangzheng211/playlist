@@ -8,7 +8,7 @@
 	git clone https://github.com/qiangzheng211/playlist/
 
 3. Execute
-* Even though I have already included the node_modules files, if these modules do not exist, you can get the node modules using:
+* I delete the node modules files for saving space, these modules do not exist, you can get the node modules using:
 
 	npm install
 

@@ -22,7 +22,7 @@ block content
       each item in infolist
         li
           div(class= 'title')= item.title
-          div(class= 'publishedAt')= 'published At: ' + prettyDate(item.publishedAt)
+          div(class= 'publishedAt')= 'published At: ' + dateFormat(item.publishedAt)
           div(class= 'description')= item.description
           a(href='https://www.youtube.com/channel/' + item.channelId target='_blank')
             div(class= 'channelTitle')= 'Channel Title: ' + item.channelTitle

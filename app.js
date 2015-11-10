@@ -55,7 +55,7 @@ app.use(function(err, req, res, next) {
 });
 
 //Local function for jade templates: Date fixing
-function prettyDate(dateString){
+function dateFormat(dateString){
     var date = new Date(dateString);
     var d = date.getDate();
     var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -63,6 +63,6 @@ function prettyDate(dateString){
     var y = date.getFullYear();
     return m+' '+d+' '+y;
 }
-app.locals.prettyDate = prettyDate;
+app.locals.dateFormat = dateFormat;
 
 module.exports = app;

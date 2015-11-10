@@ -1,10 +1,6 @@
 requirejs(['jquery'],
   function ($) {
     
-    function clearPx(str){
-      return Number(str.replace(/px$/, ''));
-    }
-
     //YouTube player functions refer to "https://developers.google.com/youtube/iframe_api_reference"
     var player;
     window.onYouTubeIframeAPIReady = onYouTubeIframeAPIReady;
@@ -46,9 +42,7 @@ requirejs(['jquery'],
 
       switchPlayingStatus(event.data, selected);
       window.selected = selected;
-
-      /*InfoList functions */
-      adjustInfo();
+      
       //adjust selected location
       $('.playlist')[0].style['margin-top'] =  -(window.selected.offsetTop - window.selected.parentElement.offsetTop)  + 'px';
 
@@ -76,20 +70,6 @@ requirejs(['jquery'],
       }
     }
 
-    function adjustInfo(){
-      var comp_style = window.getComputedStyle ? getComputedStyle(window.selected) : document.body.currentStyle(window.selected);
-
-      //adjust infolist window as it changes sizes
-      $('.playlist_container')[0].style.height =
-       (clearPx(comp_style['height'])
-       + clearPx(comp_style['padding-top'])
-       + clearPx(comp_style['padding-bottom'])
-       + clearPx(comp_style['margin-top'])
-       + clearPx(comp_style['margin-bottom'])
-     ) + 'px';
-
-    }
-
     function stopVideo() {
       player.stopVideo();
     }
@@ -98,8 +78,5 @@ requirejs(['jquery'],
     $('.select_list').on('change', function(){
       window.location.href = '/' + this.value;
     });
-
-    // Window Resize 
-    $(window).on('resize', adjustInfo);
 
 });

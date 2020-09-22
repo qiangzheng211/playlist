@@ -17,7 +17,7 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0",
-    "googleapis": "~2.1.1"
+    "googleapis": "~59.0.0"
   },
   "description": "Create a node.js application consisting of a single playlist module with YouTube’s public search API.",
   "main": "app.js",
